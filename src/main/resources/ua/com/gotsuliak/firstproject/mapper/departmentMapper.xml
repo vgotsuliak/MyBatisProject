@@ -1,6 +1,10 @@
 <!DOCTYPE mapper     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="ua.com.gotsuliak.firstproject.mapper.DepartmentMapper">
-    <select id="getDepartment" parameterType="java.lang.Integer">
+    <resultMap id="department" type="ua.com.gotsuliak.firstproject.entity.Department">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+    </resultMap>
+    <select id="getDepartment" parameterType="java.lang.Integer" resultMap="department">
         select * from department where id = #{id}
     </select>
 </mapper>
