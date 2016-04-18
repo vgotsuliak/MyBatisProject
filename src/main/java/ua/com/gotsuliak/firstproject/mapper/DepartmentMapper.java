@@ -9,7 +9,7 @@ import ua.com.gotsuliak.firstproject.entity.Department;
 public interface DepartmentMapper {
 
     /**
-     * Annotation @Result is redundant here because property names are the same as column names.
+     * Annotation @Results is redundant here because property names are the same as column names.
      * Leave it for clearness
      */
     @Results({
