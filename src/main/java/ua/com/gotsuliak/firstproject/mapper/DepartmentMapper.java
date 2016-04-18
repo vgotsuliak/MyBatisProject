@@ -8,6 +8,10 @@ import ua.com.gotsuliak.firstproject.entity.Department;
 
 public interface DepartmentMapper {
 
+    /**
+     * Annotation @Result is redundant here because property names are the same as column names.
+     * Leave it for clearness
+     */
     @Results({
             @Result(id = true, property = "id", column = "id"),
             @Result(property = "name", column = "name")
