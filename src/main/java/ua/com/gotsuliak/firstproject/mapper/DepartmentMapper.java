@@ -16,7 +16,7 @@ public interface DepartmentMapper {
             @Result(id = true, property = "id", column = "id"),
             @Result(property = "name", column = "name")
     })
-    @Select("Select name from department where id = #{id}")
+    @Select("Select * from department where id = #{id}")
     Department getDepartment(int id);
 
 }
