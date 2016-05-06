@@ -14,6 +14,7 @@ import ua.com.gotsuliak.firstproject.mapper.DepartmentMapper;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.util.List;
 
 /**
  * Created by VGotsuliak on 14.04.2016.
@@ -33,7 +34,11 @@ public class Main {
             Employee employee = employeeDAO.getEmployee(1);
             System.out.println(employee);
 
-
+            List<Employee> employees = employeeDAO.getEmployees();
+            System.out.println("--- All employees ---");
+            for (Employee e : employees) {
+                System.out.println(e);
+            }
         } catch (IOException e) {
             throw new IllegalArgumentException();
         }

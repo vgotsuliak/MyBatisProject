@@ -5,6 +5,8 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import ua.com.gotsuliak.firstproject.entity.Employee;
 import ua.com.gotsuliak.firstproject.mapper.EmployeeMapper;
 
+import java.util.List;
+
 public class EmployeeDAOImpl implements EmployeeDAO {
 
     private SqlSessionFactory sqlSessionFactory;
@@ -18,6 +20,14 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         try (SqlSession sqlSession = sqlSessionFactory.openSession()) {
             EmployeeMapper employeeMapper = sqlSession.getMapper(EmployeeMapper.class);
             return employeeMapper.getEmployee(id);
+        }
+    }
+
+    @Override
+    public List<Employee> getEmployees() {
+        try (SqlSession sqlSession = sqlSessionFactory.openSession()) {
+            EmployeeMapper employeeMapper = sqlSession.getMapper(EmployeeMapper.class);
+            return employeeMapper.getEmployees();
         }
     }
 
