@@ -20,7 +20,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper class="ua.com.gotsuliak.trymybatis.mapper.DepartmentMapper"/>
-        <mapper class="ua.com.gotsuliak.trymybatis.mapper.EmployeeMapper"/>
+        <package name="ua.com.gotsuliak.trymybatis.mapper"/>
     </mappers>
 </configuration>
