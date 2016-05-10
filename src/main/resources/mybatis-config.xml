@@ -20,7 +20,7 @@
         </environment>
     </environments>
     <mappers>
-        <mapper class="ua.com.gotsuliak.firstproject.mapper.DepartmentMapper"/>
-        <mapper class="ua.com.gotsuliak.firstproject.mapper.EmployeeMapper"/>
+        <mapper class="ua.com.gotsuliak.trymybatis.mapper.DepartmentMapper"/>
+        <mapper class="ua.com.gotsuliak.trymybatis.mapper.EmployeeMapper"/>
     </mappers>
 </configuration>

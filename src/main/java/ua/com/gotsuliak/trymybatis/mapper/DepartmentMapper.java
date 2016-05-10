@@ -1,11 +1,11 @@
-package ua.com.gotsuliak.firstproject.mapper;
+package ua.com.gotsuliak.trymybatis.mapper;
 
 import org.apache.ibatis.annotations.Many;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
-import ua.com.gotsuliak.firstproject.entity.Department;
-import ua.com.gotsuliak.firstproject.entity.Employee;
+import ua.com.gotsuliak.trymybatis.entity.Department;
+import ua.com.gotsuliak.trymybatis.entity.Employee;
 
 import java.util.List;
 

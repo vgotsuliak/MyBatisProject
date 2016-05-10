@@ -1,9 +1,9 @@
-package ua.com.gotsuliak.firstproject.dao;
+package ua.com.gotsuliak.trymybatis.dao;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
-import ua.com.gotsuliak.firstproject.entity.Employee;
-import ua.com.gotsuliak.firstproject.mapper.EmployeeMapper;
+import ua.com.gotsuliak.trymybatis.entity.Employee;
+import ua.com.gotsuliak.trymybatis.mapper.EmployeeMapper;
 
 import java.util.List;
 

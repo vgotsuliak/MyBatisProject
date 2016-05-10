@@ -1,16 +1,14 @@
-package ua.com.gotsuliak.firstproject;
+package ua.com.gotsuliak.trymybatis;
 
 import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import ua.com.gotsuliak.firstproject.dao.DepartmentDAO;
-import ua.com.gotsuliak.firstproject.dao.DepartmentDAOImpl;
-import ua.com.gotsuliak.firstproject.dao.EmployeeDAO;
-import ua.com.gotsuliak.firstproject.dao.EmployeeDAOImpl;
-import ua.com.gotsuliak.firstproject.entity.Department;
-import ua.com.gotsuliak.firstproject.entity.Employee;
-import ua.com.gotsuliak.firstproject.mapper.DepartmentMapper;
+import ua.com.gotsuliak.trymybatis.dao.DepartmentDAO;
+import ua.com.gotsuliak.trymybatis.dao.DepartmentDAOImpl;
+import ua.com.gotsuliak.trymybatis.dao.EmployeeDAO;
+import ua.com.gotsuliak.trymybatis.dao.EmployeeDAOImpl;
+import ua.com.gotsuliak.trymybatis.entity.Department;
+import ua.com.gotsuliak.trymybatis.entity.Employee;
 
 import java.io.IOException;
 import java.io.Reader;

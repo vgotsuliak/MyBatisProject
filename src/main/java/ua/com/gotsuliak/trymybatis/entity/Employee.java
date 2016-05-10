@@ -1,4 +1,4 @@
-package ua.com.gotsuliak.firstproject.entity;
+package ua.com.gotsuliak.trymybatis.entity;
 
 import lombok.Data;
 import lombok.ToString;

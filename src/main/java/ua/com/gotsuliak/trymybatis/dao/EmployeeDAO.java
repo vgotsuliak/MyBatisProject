@@ -1,6 +1,6 @@
-package ua.com.gotsuliak.firstproject.dao;
+package ua.com.gotsuliak.trymybatis.dao;
 
-import ua.com.gotsuliak.firstproject.entity.Employee;
+import ua.com.gotsuliak.trymybatis.entity.Employee;
 
 import java.util.List;
 
