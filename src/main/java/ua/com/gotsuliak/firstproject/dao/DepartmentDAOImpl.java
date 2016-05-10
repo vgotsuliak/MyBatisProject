@@ -5,6 +5,8 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import ua.com.gotsuliak.firstproject.entity.Department;
 import ua.com.gotsuliak.firstproject.mapper.DepartmentMapper;
 
+import java.util.List;
+
 public class DepartmentDAOImpl implements DepartmentDAO {
 
     private SqlSessionFactory sqlSessionFactory;
@@ -18,6 +20,14 @@ public class DepartmentDAOImpl implements DepartmentDAO {
         try (SqlSession sqlSession = sqlSessionFactory.openSession()) {
             DepartmentMapper departmentMapper = sqlSession.getMapper(DepartmentMapper.class);
             return departmentMapper.getDepartment(id);
+        }
+    }
+
+    @Override
+    public List<Department> getDepartments() {
+        try (SqlSession sqlSession = sqlSessionFactory.openSession()) {
+            DepartmentMapper departmentMapper = sqlSession.getMapper(DepartmentMapper.class);
+            return departmentMapper.getDepartments();
         }
     }
 }

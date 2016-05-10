@@ -39,6 +39,13 @@ public class Main {
             for (Employee e : employees) {
                 System.out.println(e);
             }
+
+            List<Department> departments = departmentDAO.getDepartments();
+            System.out.println("--- All departments ---");
+            for (Department d : departments) {
+                System.out.println(d);
+            }
+
         } catch (IOException e) {
             throw new IllegalArgumentException();
         }

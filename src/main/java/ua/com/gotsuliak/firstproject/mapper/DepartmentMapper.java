@@ -5,6 +5,8 @@ import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 import ua.com.gotsuliak.firstproject.entity.Department;
 
+import java.util.List;
+
 
 public interface DepartmentMapper {
 
@@ -18,5 +20,8 @@ public interface DepartmentMapper {
     })
     @Select("Select * from department where id = #{id}")
     Department getDepartment(int id);
+
+    @Select("Select * from department")
+    List<Department> getDepartments();
 
 }
