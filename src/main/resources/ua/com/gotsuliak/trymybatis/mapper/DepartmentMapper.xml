@@ -3,11 +3,20 @@
     <resultMap id="department" type="ua.com.gotsuliak.trymybatis.entity.Department">
         <id property="id" column="id"/>
         <result property="name" column="name"/>
+        <collection property="employees" javaType="ArrayList" ofType="ua.com.gotsuliak.trymybatis.entity.Employee"
+                    column="id" select="selectEmployees"/>
+    </resultMap>
+    <resultMap id="employee" type="ua.com.gotsuliak.trymybatis.entity.Employee">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
     </resultMap>
     <select id="getDepartment" parameterType="java.lang.Integer" resultMap="department">
         select * from department where id = #{id}
     </select>
     <select id="getDepartments" resultMap="department">
         select * from department
+    </select>
+    <select id="selectEmployees" parameterType="java.lang.Integer" resultMap="employee">
+        select * from employee where department_id = #{id}
     </select>
 </mapper>
