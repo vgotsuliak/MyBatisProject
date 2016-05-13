@@ -1,33 +1,54 @@
+DROP ALL OBJECTS DELETE FILES;
+
 CREATE TABLE DEPARTMENT
 (
-  ID INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  ID   INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
   NAME VARCHAR(50)
 );
-CREATE UNIQUE INDEX "department_id_uindex" ON DEPARTMENT (ID);
+CREATE UNIQUE INDEX ON DEPARTMENT (ID);
 
 CREATE TABLE EMPLOYEE
 (
-  ID INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  NAME VARCHAR(50),
+  ID            INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  NAME          VARCHAR(50),
   DEPARTMENT_ID INTEGER,
   CONSTRAINT DEPARTMENT_ID FOREIGN KEY (DEPARTMENT_ID) REFERENCES DEPARTMENT (ID)
 );
-CREATE UNIQUE INDEX "user_id_uindex" ON EMPLOYEE (ID);
-CREATE INDEX DEPARTMENT_ID_INDEX_7 ON EMPLOYEE (DEPARTMENT_ID);
+CREATE UNIQUE INDEX ON EMPLOYEE (ID);
+CREATE INDEX ON EMPLOYEE (DEPARTMENT_ID);
 
-insert into department(name) values ('IT department');
-insert into department(name) values ('Sales department');
-insert into department(name) values ('Financial department');
-insert into department(name) values ('Security department');
-insert into department(name) values ('HR department');
+CREATE TABLE PROJECT
+(
+  ID   INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  NAME VARCHAR(50)
+);
+CREATE UNIQUE INDEX ON PROJECT (ID);
 
-insert into employee(name, department_id) VALUES ('John', 1);
-insert into employee(name, department_id) VALUES ('Greg', 1);
-insert into employee(name, department_id) VALUES ('Jacob', 2);
-insert into employee(name, department_id) VALUES ('Peter', 2);
-insert into employee(name, department_id) VALUES ('Richard', 3);
-insert into employee(name, department_id) VALUES ('Paul', 3);
-insert into employee(name, department_id) VALUES ('Jared', 4);
-insert into employee(name, department_id) VALUES ('Donald', 4);
-insert into employee(name, department_id) VALUES ('Diana', 5);
-insert into employee(name, department_id) VALUES ('Jennifer', 5);
+CREATE TABLE PROJECT_EMPLOYEE
+(
+  ID          INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  PROJECT_ID  INTEGER                            NOT NULL,
+  EMPLOYEE_ID INTEGER                            NOT NULL,
+  CONSTRAINT EMPLOYEE_FK FOREIGN KEY (EMPLOYEE_ID) REFERENCES EMPLOYEE (ID),
+  CONSTRAINT PROJECT_FK FOREIGN KEY (PROJECT_ID) REFERENCES PROJECT (ID)
+);
+CREATE UNIQUE INDEX ON PROJECT_EMPLOYEE (ID);
+CREATE INDEX ON PROJECT_EMPLOYEE (EMPLOYEE_ID);
+CREATE INDEX ON PROJECT_EMPLOYEE (PROJECT_ID);
+
+INSERT INTO department (name) VALUES (''IT department'');
+INSERT INTO department (name) VALUES (''Sales department'');
+INSERT INTO department (name) VALUES (''Financial department'');
+INSERT INTO department (name) VALUES (''Security department'');
+INSERT INTO department (name) VALUES (''HR department'');
+
+INSERT INTO employee (name, department_id) VALUES (''John'', 1);
+INSERT INTO employee (name, department_id) VALUES (''Greg'', 1);
+INSERT INTO employee (name, department_id) VALUES (''Jacob'', 2);
+INSERT INTO employee (name, department_id) VALUES (''Peter'', 2);
+INSERT INTO employee (name, department_id) VALUES (''Richard'', 3);
+INSERT INTO employee (name, department_id) VALUES (''Paul'', 3);
+INSERT INTO employee (name, department_id) VALUES (''Jared'', 4);
+INSERT INTO employee (name, department_id) VALUES (''Donald'', 4);
+INSERT INTO employee (name, department_id) VALUES (''Diana'', 5);
+INSERT INTO employee (name, department_id) VALUES (''Jennifer'', 5);
