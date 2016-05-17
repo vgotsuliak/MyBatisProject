@@ -52,3 +52,16 @@ INSERT INTO employee (name, department_id) VALUES ('Jared', 4);
 INSERT INTO employee (name, department_id) VALUES ('Donald', 4);
 INSERT INTO employee (name, department_id) VALUES ('Diana', 5);
 INSERT INTO employee (name, department_id) VALUES ('Jennifer', 5);
+
+insert into project(name) values('Project1');
+insert into project(name) values('Project2');
+insert into project(name) values('Project3');
+insert into project(name) values('Project4');
+insert into project(name) values('Project5');
+
+insert into PROJECT_EMPLOYEE(PROJECT_ID, EMPLOYEE_ID) VALUES (1, 1);
+insert into PROJECT_EMPLOYEE(PROJECT_ID, EMPLOYEE_ID) VALUES (1, 2);
+insert into PROJECT_EMPLOYEE(PROJECT_ID, EMPLOYEE_ID) VALUES (1, 3);
+
+insert into PROJECT_EMPLOYEE(PROJECT_ID, EMPLOYEE_ID) VALUES (2, 2);
+insert into PROJECT_EMPLOYEE(PROJECT_ID, EMPLOYEE_ID) VALUES (3, 2);
