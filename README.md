@@ -1,6 +1,9 @@
-# MyBatisProject. 
+# MyBatisProject
 
 Example project which shows basics of work with MyBatis framework.
+
+See the livecoding where I code it step-by-step:
+https://www.livecoding.tv/trunkvan/videos/XKMPn-java-and-mybatis-application-from-scratch/
 
 The main point of this tutorial is to describe two ways of describing MyBatis mappers: via XML and via java annotations.
 
